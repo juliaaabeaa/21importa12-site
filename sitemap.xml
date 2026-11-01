@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Depois de publicar o site em um domínio (ex: https://21importa12online.com.br),
+  substitua "SEU-DOMINIO-AQUI" abaixo pelo endereço real.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://SEU-DOMINIO-AQUI/index.html</loc></url>
+  <url><loc>https://SEU-DOMINIO-AQUI/catalogo.html</loc></url>
+  <url><loc>https://SEU-DOMINIO-AQUI/ofertas.html</loc></url>
+  <url><loc>https://SEU-DOMINIO-AQUI/sobre.html</loc></url>
+  <url><loc>https://SEU-DOMINIO-AQUI/contato.html</loc></url>
+  <url><loc>https://SEU-DOMINIO-AQUI/politicas.html</loc></url>
+</urlset>

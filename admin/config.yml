@@ -1,0 +1,57 @@
+# =========================================================
+# CONFIGURAÇÃO DO PAINEL DE ADMIN (Decap CMS)
+# =========================================================
+# Este arquivo define como o painel em /admin funciona.
+# Você não precisa editar nada aqui no dia a dia — isso só
+# é necessário se quiser mudar os campos do formulário de
+# produto no futuro.
+
+backend:
+  name: github
+  repo: juliaaabeaa/21importa12-site
+  branch: main          # troque se o nome do seu branch principal for outro (ex: master)
+
+# Login do painel (/admin): feito com a sua conta do GitHub, usando o
+# login (OAuth) do próprio Netlify. Veja o passo a passo no README.
+
+media_folder: "images/produtos"   # onde as fotos enviadas pelo painel são salvas
+public_folder: "images/produtos"  # como o link da foto aparece no site
+
+collections:
+  - name: "products"
+    label: "Catálogo de Relógios"
+    files:
+      - name: "catalog"
+        label: "Produtos"
+        file: "data/products.json"
+        fields:
+          - label: "Produtos"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.name}} — R$ {{fields.price}}"
+            fields:
+              - { label: "ID (número único, não repita)", name: "id", widget: "number", value_type: "int" }
+              - { label: "Slug (identificador do link)", name: "slug", widget: "string", hint: "ex: relogio-urban-noir" }
+              - { label: "Nome", name: "name", widget: "string" }
+              - { label: "Marca", name: "brand", widget: "string" }
+              - { label: "Categoria", name: "category", widget: "string", hint: "ex: Masculino, Feminino, Unissex, Esportivo..." }
+              - { label: "Preço", name: "price", widget: "number", value_type: "float" }
+              - { label: "Preço antigo (deixe vazio se não houver promoção)", name: "oldPrice", widget: "number", value_type: "float", required: false }
+              - { label: "Descrição", name: "description", widget: "text" }
+              - label: "Fotos"
+                name: "images"
+                widget: "list"
+                field: { label: "Foto", name: "image", widget: "image" }
+              - { label: "Cor", name: "color", widget: "string", required: false }
+              - { label: "Material", name: "material", widget: "string", required: false }
+              - { label: "Pulseira", name: "strap", widget: "string", required: false }
+              - { label: "Tipo de mostrador", name: "display", widget: "string", required: false }
+              - { label: "Resistência à água", name: "waterResistance", widget: "string", required: false }
+              - { label: "Garantia", name: "warranty", widget: "string", required: false }
+              - { label: "Código do produto", name: "code", widget: "string", required: false }
+              - { label: "Em estoque?", name: "stock", widget: "boolean", default: true }
+              - { label: "Texto do estoque", name: "stockLabel", widget: "string", default: "Disponível", hint: "ex: Disponível, Últimas unidades, Esgotado" }
+              - { label: "Quantidade em estoque (reservado p/ o futuro)", name: "stockQuantity", widget: "number", required: false, value_type: "int" }
+              - { label: "Aparece nos Destaques da Home?", name: "featured", widget: "boolean", default: false }
+              - { label: "Em promoção?", name: "promotion", widget: "boolean", default: false }
+              - { label: "Ativo (visível na loja)?", name: "active", widget: "boolean", default: true, hint: "Desmarque para esconder o produto sem apagar o cadastro" }

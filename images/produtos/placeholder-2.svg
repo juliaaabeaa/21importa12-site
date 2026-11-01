@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1330"/>
+      <stop offset="100%" stop-color="#0d1730"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="60%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#c81e3a" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#c81e3a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg2)"/>
+  <rect width="400" height="400" fill="url(#glow2)"/>
+  <circle cx="200" cy="190" r="88" fill="none" stroke="#4a5468" stroke-width="4"/>
+  <circle cx="200" cy="190" r="70" fill="none" stroke="#131316" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="190" x2="200" y2="145" stroke="#eef1f6" stroke-width="4" stroke-linecap="round"/>
+  <line x1="200" y1="190" x2="175" y2="165" stroke="#eef1f6" stroke-width="4" stroke-linecap="round"/>
+  <rect x="182" y="78" width="36" height="26" rx="6" fill="#262c3a"/>
+  <rect x="182" y="276" width="36" height="26" rx="6" fill="#262c3a"/>
+  <text x="200" y="360" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#8891a3">FOTO DE TESTE — ÂNGULO 2</text>
+</svg>
